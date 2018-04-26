@@ -23,10 +23,15 @@
 					.domain([0, 60])
 					.range([0, width]);
 
+		var xAxis = d3.axisBottom(widthScale)
+					.ticks(11);
+
 		var canvas = d3.select("body")
 					.append("svg")
 					.attr("width", width)
-					.attr("height", height);
+					.attr("height", height)
+					.append("g")
+					.attr("transform", "translate(20, 0)");
 
 		var bars = canvas.selectAll("rect")
 					.data(dataArray)
@@ -36,6 +41,10 @@
 						.attr("height", 50)
 						.attr("fill", function(d) { return color(d); })
 						.attr("y", function(d, i) { return i*55; });
+
+		canvas.append("g")
+			.attr("transform", "translate(0, 250)")
+			.call(xAxis);
 
 	</script>
 
