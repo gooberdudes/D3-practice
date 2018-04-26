@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>D3 tutorial</title>
+	<script src="https://d3js.org/d3.v5.min.js"> </script>
+</head>
+
+<body>
+
+	<script>
+		
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500);
+
+
+		var circle = canvas.append("circle")
+					.attr("cx", 250)
+					.attr("cy", 250)
+					.attr("r", 75)
+					.attr("stroke", "black")
+					.attr("fill", "blue");
+
+		
+		var line1 = canvas.append("line")
+					.attr("x1", 175)
+					.attr("y1", 250)
+					.attr("x2", 325)
+					.attr("y2", 250)
+					.attr("stroke", "black")
+					.attr("stroke-width", 1);
+
+		var line2 = canvas.append("line")
+					.attr("x1", 250)
+					.attr("y1", 175)
+					.attr("x2", 250)
+					.attr("y2", 325)
+					.attr("stroke", "black")
+					.attr("stroke-width", 1);			
+
+		var circle2 = canvas.append("circle")
+					.attr("cx", 250)
+					.attr("cy", 250)
+					.attr("r", 50)
+					.attr("fill", "white")
+					.attr("stroke", "black");
+
+
+		var line3 = canvas.append("line")
+					.attr("x1", 250)
+					.attr("y1", 200)
+					.attr("x2", 250)
+					.attr("y2", 300)
+					.attr("stroke", "grey")
+					.attr("stroke-width", 1);
+
+	</script>
+
+</body>
+
+</html>
